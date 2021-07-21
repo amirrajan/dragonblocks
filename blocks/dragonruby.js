@@ -3708,7 +3708,7 @@ Blockly.defineBlocksWithJsonArray([
       "check": "Boolean"
     }
   ],
-  "return": null,
+  "output": null,
   "colour": 0,
   "tooltip": "Iterates over Hash and deletes keys depending on condition, This version returns deleted stuff.",
   "helpUrl": ""
@@ -3773,7 +3773,7 @@ Blockly.defineBlocksWithJsonArray([
       "check": "Boolean"
     }
   ],
-  "return": null,
+  "output": null,
   "colour": 0,
   "tooltip": "Iterates over Hash and retrieves keys depending on condition, This version returns deleted stuff.",
   "helpUrl": ""
