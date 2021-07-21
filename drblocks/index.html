@@ -375,7 +375,7 @@
     </category>
     <sep></sep>
     <category name="%{BKY_CATVARIABLES}" colour="%{BKY_VARIABLES_HUE}" custom="VARIABLE"></category>
-    <category name="%{BKY_CATFUNCTIONS}" colour="%{BKY_PROCEDURES_HUE}" custom="PROCEDURE"></category>
+    <category name="%{BKY_CATFUNCTIONS}" colour="%{BKY_PROCEDURES_HUE}" custom="PROCEDURE"> </category>
     <sep></sep>
     
     <!-- DragonRuby XML Blocks! -->
@@ -1245,6 +1245,14 @@
       <block type="touch_foreach_touches"></block>
     </category>
     <category name="Essentials" colour="0">
+      <block type="comment">
+        <value name="comment">
+          <shadow type="text">
+            <field name="TEXT"></field>
+          </shadow>
+        </value>
+      </block>
+      <block type="return"></block>
       <block type="require">
         <value name="path">
           <shadow type="text">

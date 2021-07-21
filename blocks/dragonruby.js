@@ -3214,6 +3214,37 @@ Blockly.defineBlocksWithJsonArray([
 // Essentials
 Blockly.defineBlocksWithJsonArray([
 {
+  "type": "comment",
+  "message0": "Comment %1",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "comment",
+      "text": ""
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 0,
+  "tooltip": "Adds a Single-Line comment into the code.",
+  "helpUrl": ""
+},
+{
+  "type": "return",
+  "message0": "Return %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "value",
+    }
+  ],
+  "nextStatement": null,
+  "previousStatement": null,
+  "colour": 0,
+  "tooltip": "Returns expression.",
+  "helpUrl": ""
+},
+{
   "type": "require",
   "message0": "Require %1",
   "args0": [

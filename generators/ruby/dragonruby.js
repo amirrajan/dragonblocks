@@ -824,6 +824,16 @@ Blockly.Ruby.keyboard_char_keys = function(block) {
 };
 
 // Essentials
+Blockly.Ruby.comment = function(block) {
+  var comment = block.getFieldValue('comment');
+  return "# " + comment + "\n";
+};
+
+Blockly.Ruby.return = function(block) {
+  var v = Blockly.Ruby.valueToCode(block, 'value', Blockly.Ruby.ORDER_ATOMIC);
+  return "return " + v + "\n";
+};
+
 Blockly.Ruby.require = function(block) {
   var path = Blockly.Ruby.valueToCode(block, 'path', Blockly.Ruby.ORDER_ATOMIC);
   return "require(" + path + ")\n";
