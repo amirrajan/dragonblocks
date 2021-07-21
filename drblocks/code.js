@@ -443,6 +443,23 @@ Code.init = function() {
 
   // Lazy-load the syntax-highlighting.
   window.setTimeout(Code.importPrettify, 1);
+  
+  // #CODE
+  var dom = Blockly.Xml.textToDom(`
+    <xml xmlns="https://developers.google.com/blockly/xml">
+      <variables>
+        <variable id="hw5(m7RjJ.0{5WTG*~o!">args</variable>
+      </variables>
+      <block type="procedures_defnoreturn" id="+p*D(ro8{uV[t;V.gtql" x="38" y="38">
+        <mutation>
+          <arg name="args" varid="hw5(m7RjJ.0{5WTG*~o!"></arg>
+        </mutation>
+        <field name="NAME">tick</field>
+        <comment pinned="false" h="80" w="160">Game Loop!</comment>
+      </block>
+  </xml>`);
+  Blockly.mainWorkspace.clear();
+  Blockly.Xml.domToWorkspace(dom, Blockly.mainWorkspace);
 };
 
 /**
@@ -538,7 +555,7 @@ document.write('<script src="msg/' + Code.LANG + '.js"></script>\n');
 // Load Blockly's language strings.
 document.write('<script src="../msg/js/' + Code.LANG + '.js"></script>\n');
 
-window.addEventListener('load', Code.init); 
+window.addEventListener('load', Code.init);
 
 // Credits: https://stackoverflow.com/a/18197341/10896648
 function text_to_file(text, filename) {

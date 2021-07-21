@@ -30,9 +30,9 @@ Also DragonBlocks can be downloaded and used offline via "Download as ZIP" with 
 
 ## Getting Started
 
-File `template_new.xml` provided as small template that consists of `tick` function with `args` argument.
+When you start DragonBlocks the block for function `tick` appears with `args` argument assigned to, This is by default so you can put blocks inside the function block or just delete it to write standard Ruby code.
 
-If you know how to create function in Blockly then you're fine, But if no you can use that XML file and via "Import from XML" button select `template_new.xml` to start.
+Also a file named `template_new.xml` provided as small template that consists of `tick` function with `args` argument, Which is same what appears when starting DragonBlocks.
 
 You have the standard Blockly blocks in addition to Blocks for following DragonRuby APIs:
 

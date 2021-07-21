@@ -81,10 +81,9 @@ Blockly.Ruby.gtk_calcstringbox = function(block) {
   var string = Blockly.Ruby.valueToCode(block, 'string', Blockly.Ruby.ORDER_ATOMIC);
   var size_enum = Blockly.Ruby.valueToCode(block, 'size_enum', Blockly.Ruby.ORDER_ATOMIC);
   var font = Blockly.Ruby.valueToCode(block, 'font', Blockly.Ruby.ORDER_ATOMIC);
-  console.log(font);
   var fontres = "";
   
-  if (font === "") {
+  if (font === "" || font === "nil") {
     fontres = "";
   } else {
     fontres = "," + font;
