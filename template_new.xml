@@ -1,0 +1,12 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="hw5(m7RjJ.0{5WTG*~o!">args</variable>
+  </variables>
+  <block type="procedures_defnoreturn" id="+p*D(ro8{uV[t;V.gtql" x="88" y="38">
+    <mutation>
+      <arg name="args" varid="hw5(m7RjJ.0{5WTG*~o!"></arg>
+    </mutation>
+    <field name="NAME">tick</field>
+    <comment pinned="false" h="80" w="160">Game Loop!</comment>
+  </block>
+</xml>
