@@ -179,7 +179,7 @@ Blockly.Ruby.args_audio_play = function(block) {
   var paused = Blockly.Ruby.valueToCode(block, 'paused', Blockly.Ruby.ORDER_ATOMIC);
   var looping = Blockly.Ruby.valueToCode(block, 'looping', Blockly.Ruby.ORDER_ATOMIC);
   
-  return "args.audio[" + audio_name +
+  return "$gtk.args.audio[" + audio_name +
          "] ||= {\n" +
          "  path: " + path + ",\n" +
          "  x: " + x + ",\n" +
