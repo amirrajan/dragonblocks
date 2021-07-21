@@ -10,19 +10,6 @@
  */
 'use strict';
 
-goog.provide('Blockly.Blocks.texts');  // Deprecated
-goog.provide('Blockly.Constants.Text');
-
-goog.require('Blockly');
-goog.require('Blockly.Blocks');
-goog.require('Blockly.FieldDropdown');
-goog.require('Blockly.FieldImage');
-goog.require('Blockly.FieldMultilineInput');
-goog.require('Blockly.FieldTextInput');
-goog.require('Blockly.FieldVariable');
-goog.require('Blockly.Mutator');
-
-
 /**
  * Unused constant for the common HSV hue for all blocks in this category.
  * @deprecated Use Blockly.Msg['TEXTS_HUE']. (2018 April 5)

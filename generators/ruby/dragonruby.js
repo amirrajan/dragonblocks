@@ -334,50 +334,12 @@ Blockly.Ruby.state_get_variable = function(block) {
 };
 
 // Outputs
-Blockly.Ruby.outputs_new_rect = function(block) {
-  var x = Blockly.Ruby.valueToCode(block, 'x', Blockly.Ruby.ORDER_ATOMIC);
-  var y = Blockly.Ruby.valueToCode(block, 'y', Blockly.Ruby.ORDER_ATOMIC);
-  var w = Blockly.Ruby.valueToCode(block, 'w', Blockly.Ruby.ORDER_ATOMIC);
-  var h = Blockly.Ruby.valueToCode(block, 'h', Blockly.Ruby.ORDER_ATOMIC);
-  return ["{ x: " + x + ", y: " + y + ", w: " + w + ", h: " + h + " }", Blockly.Ruby.ORDER_ATOMIC];
-};
-
-Blockly.Ruby.outputs_new_src_rect = function(block) {
-  var x = Blockly.Ruby.valueToCode(block, 'x', Blockly.Ruby.ORDER_ATOMIC);
-  var y = Blockly.Ruby.valueToCode(block, 'y', Blockly.Ruby.ORDER_ATOMIC);
-  var w = Blockly.Ruby.valueToCode(block, 'w', Blockly.Ruby.ORDER_ATOMIC);
-  var h = Blockly.Ruby.valueToCode(block, 'h', Blockly.Ruby.ORDER_ATOMIC);
-  return ["{ source_x: " + x + ", source_y: " + y + ", source_w: " + w + ", source_h: " + h + " }", Blockly.Ruby.ORDER_ATOMIC];
-};
-
-Blockly.Ruby.outputs_new_tile_rect = function(block) {
-  var x = Blockly.Ruby.valueToCode(block, 'x', Blockly.Ruby.ORDER_ATOMIC);
-  var y = Blockly.Ruby.valueToCode(block, 'y', Blockly.Ruby.ORDER_ATOMIC);
-  var w = Blockly.Ruby.valueToCode(block, 'w', Blockly.Ruby.ORDER_ATOMIC);
-  var h = Blockly.Ruby.valueToCode(block, 'h', Blockly.Ruby.ORDER_ATOMIC);
-  return ["{ tile_x: " + x + ", tile_y: " + y + ", tile_w: " + w + ", tile_h: " + h + " }", Blockly.Ruby.ORDER_ATOMIC];
-};
-
 Blockly.Ruby.outputs_new_color = function(block) {
   var r = Blockly.Ruby.valueToCode(block, 'r', Blockly.Ruby.ORDER_ATOMIC);
   var g = Blockly.Ruby.valueToCode(block, 'g', Blockly.Ruby.ORDER_ATOMIC);
   var b = Blockly.Ruby.valueToCode(block, 'b', Blockly.Ruby.ORDER_ATOMIC);
   var a = Blockly.Ruby.valueToCode(block, 'a', Blockly.Ruby.ORDER_ATOMIC);
   return ["{ r: " + r + ", g: " + g + ", b: " + b + ", a: " + a + " }", Blockly.Ruby.ORDER_ATOMIC];
-};
-
-Blockly.Ruby.outputs_new_line = function(block) {
-  var x1 = Blockly.Ruby.valueToCode(block, 'x', Blockly.Ruby.ORDER_ATOMIC);
-  var y1 = Blockly.Ruby.valueToCode(block, 'y', Blockly.Ruby.ORDER_ATOMIC);
-  var x2 = Blockly.Ruby.valueToCode(block, 'x2', Blockly.Ruby.ORDER_ATOMIC);
-  var y2 = Blockly.Ruby.valueToCode(block, 'y2', Blockly.Ruby.ORDER_ATOMIC);
-  return ["{ x: " + x1 + ", y: " + y1 + ", x2: " + x2 + ", y2: " + y2 + " }", Blockly.Ruby.ORDER_ATOMIC];
-};
-
-Blockly.Ruby.outputs_new_point = function(block) {
-  var x = Blockly.Ruby.valueToCode(block, 'x', Blockly.Ruby.ORDER_ATOMIC);
-  var y = Blockly.Ruby.valueToCode(block, 'y', Blockly.Ruby.ORDER_ATOMIC);
-  return ["{ x: " + x + ", y: " + y + "}", Blockly.Ruby.ORDER_ATOMIC];
 };
 
 Blockly.Ruby.outputs_background_color = function(block) {
@@ -585,6 +547,44 @@ Blockly.Ruby.easing_ease_spline = function(block) {
 };
 
 // Geometry
+Blockly.Ruby.geometry_new_rect = function(block) {
+  var x = Blockly.Ruby.valueToCode(block, 'x', Blockly.Ruby.ORDER_ATOMIC);
+  var y = Blockly.Ruby.valueToCode(block, 'y', Blockly.Ruby.ORDER_ATOMIC);
+  var w = Blockly.Ruby.valueToCode(block, 'w', Blockly.Ruby.ORDER_ATOMIC);
+  var h = Blockly.Ruby.valueToCode(block, 'h', Blockly.Ruby.ORDER_ATOMIC);
+  return ["{ x: " + x + ", y: " + y + ", w: " + w + ", h: " + h + " }", Blockly.Ruby.ORDER_ATOMIC];
+};
+
+Blockly.Ruby.geometry_new_src_rect = function(block) {
+  var x = Blockly.Ruby.valueToCode(block, 'x', Blockly.Ruby.ORDER_ATOMIC);
+  var y = Blockly.Ruby.valueToCode(block, 'y', Blockly.Ruby.ORDER_ATOMIC);
+  var w = Blockly.Ruby.valueToCode(block, 'w', Blockly.Ruby.ORDER_ATOMIC);
+  var h = Blockly.Ruby.valueToCode(block, 'h', Blockly.Ruby.ORDER_ATOMIC);
+  return ["{ source_x: " + x + ", source_y: " + y + ", source_w: " + w + ", source_h: " + h + " }", Blockly.Ruby.ORDER_ATOMIC];
+};
+
+Blockly.Ruby.geometry_new_tile_rect = function(block) {
+  var x = Blockly.Ruby.valueToCode(block, 'x', Blockly.Ruby.ORDER_ATOMIC);
+  var y = Blockly.Ruby.valueToCode(block, 'y', Blockly.Ruby.ORDER_ATOMIC);
+  var w = Blockly.Ruby.valueToCode(block, 'w', Blockly.Ruby.ORDER_ATOMIC);
+  var h = Blockly.Ruby.valueToCode(block, 'h', Blockly.Ruby.ORDER_ATOMIC);
+  return ["{ tile_x: " + x + ", tile_y: " + y + ", tile_w: " + w + ", tile_h: " + h + " }", Blockly.Ruby.ORDER_ATOMIC];
+};
+
+Blockly.Ruby.geometry_new_line = function(block) {
+  var x1 = Blockly.Ruby.valueToCode(block, 'x', Blockly.Ruby.ORDER_ATOMIC);
+  var y1 = Blockly.Ruby.valueToCode(block, 'y', Blockly.Ruby.ORDER_ATOMIC);
+  var x2 = Blockly.Ruby.valueToCode(block, 'x2', Blockly.Ruby.ORDER_ATOMIC);
+  var y2 = Blockly.Ruby.valueToCode(block, 'y2', Blockly.Ruby.ORDER_ATOMIC);
+  return ["{ x: " + x1 + ", y: " + y1 + ", x2: " + x2 + ", y2: " + y2 + " }", Blockly.Ruby.ORDER_ATOMIC];
+};
+
+Blockly.Ruby.geometry_new_point = function(block) {
+  var x = Blockly.Ruby.valueToCode(block, 'x', Blockly.Ruby.ORDER_ATOMIC);
+  var y = Blockly.Ruby.valueToCode(block, 'y', Blockly.Ruby.ORDER_ATOMIC);
+  return ["{ x: " + x + ", y: " + y + "}", Blockly.Ruby.ORDER_ATOMIC];
+};
+
 Blockly.Ruby.geometry_inside_rect = function(block) {
   var r1 = Blockly.Ruby.valueToCode(block, 'r1', Blockly.Ruby.ORDER_ATOMIC);
   var r2 = Blockly.Ruby.valueToCode(block, 'r2', Blockly.Ruby.ORDER_ATOMIC);

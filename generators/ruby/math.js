@@ -293,7 +293,7 @@ Blockly.Ruby['math_random_int'] = function(block) {
       Blockly.Ruby.ORDER_NONE) || '0';
   var argument1 = Blockly.Ruby.valueToCode(block, 'TO',
       Blockly.Ruby.ORDER_NONE) || '0';
-  var code = 'rand(' + argument0 + ', ' + argument1 + ')';
+  var code = '(rand(' + argument1 + "-1" + ')+' + argument0 + ')';
   return [code, Blockly.Ruby.ORDER_HIGH];
 };
 

@@ -1114,117 +1114,6 @@ Blockly.defineBlocksWithJsonArray([
 // Outputs
 Blockly.defineBlocksWithJsonArray([
 {
-  "type": "outputs_new_rect",
-  "message0": "Create Rectangle %1 X %2 Y %3 Width %4 Height %5",
-  "args0": [
-    {
-      "type": "input_dummy"
-    },
-    {
-      "type": "input_value",
-      "name": "x",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "y",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "w",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "h",
-      "check": "Number",
-      "align": "RIGHT"
-    }
-  ],
-  "output": null,
-  "colour": 0,
-  "tooltip": "Creates a Rectangle Hash",
-  "helpUrl": ""
-},
-{
-  "type": "outputs_new_src_rect",
-  "message0": "Create Source Rectangle %1 X %2 Y %3 Width %4 Height %5",
-  "args0": [
-    {
-      "type": "input_dummy"
-    },
-    {
-      "type": "input_value",
-      "name": "x",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "y",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "w",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "h",
-      "check": "Number",
-      "align": "RIGHT"
-    }
-  ],
-  "output": null,
-  "colour": 0,
-  "tooltip": "Creates a Source Rectangle Hash",
-  "helpUrl": ""
-},
-{
-  "type": "outputs_new_tile_rect",
-  "message0": "Create Tile Rectangle %1 X %2 Y %3 Width %4 Height %5",
-  "args0": [
-    {
-      "type": "input_dummy"
-    },
-    {
-      "type": "input_value",
-      "name": "x",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "y",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "w",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "h",
-      "check": "Number",
-      "align": "RIGHT"
-    }
-  ],
-  "output": null,
-  "colour": 0,
-  "tooltip": "Creates a Tile Rectangle Hash",
-  "helpUrl": ""
-},
-{
   "type": "outputs_new_color",
   "message0": "Create Color %1 Red %2 Green %3 Blue %4 Alpha %5",
   "args0": [
@@ -1259,68 +1148,6 @@ Blockly.defineBlocksWithJsonArray([
   "output": null,
   "colour": 0,
   "tooltip": "Creates a Color Hash",
-  "helpUrl": ""
-},
-{
-  "type": "outputs_new_line",
-  "message0": "Create Line %1 X1 %2 Y1 %3 X2 %4 Y2 %5",
-  "args0": [
-    {
-      "type": "input_dummy"
-    },
-    {
-      "type": "input_value",
-      "name": "x",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "y",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "x2",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "y2",
-      "check": "Number",
-      "align": "RIGHT"
-    }
-  ],
-  "output": null,
-  "colour": 0,
-  "tooltip": "Creates a Line Hash",
-  "helpUrl": ""
-},
-{
-  "type": "outputs_new_point",
-  "message0": "Create Point %1 X %2 Y %3",
-  "args0": [
-    {
-      "type": "input_dummy"
-    },
-    {
-      "type": "input_value",
-      "name": "x",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_value",
-      "name": "y",
-      "check": "Number",
-      "align": "RIGHT"
-    },
-  ],
-  "output": null,
-  "colour": 0,
-  "tooltip": "Creates a Point Hash",
   "helpUrl": ""
 },
 {
@@ -2053,6 +1880,179 @@ Blockly.defineBlocksWithJsonArray([
 
 // Geometry
 Blockly.defineBlocksWithJsonArray([
+{
+  "type": "geometry_new_rect",
+  "message0": "Create Rectangle %1 X %2 Y %3 Width %4 Height %5",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "w",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "h",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": null,
+  "colour": 0,
+  "tooltip": "Creates a Rectangle Hash",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_new_src_rect",
+  "message0": "Create Source Rectangle %1 X %2 Y %3 Width %4 Height %5",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "w",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "h",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": null,
+  "colour": 0,
+  "tooltip": "Creates a Source Rectangle Hash",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_new_tile_rect",
+  "message0": "Create Tile Rectangle %1 X %2 Y %3 Width %4 Height %5",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "w",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "h",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": null,
+  "colour": 0,
+  "tooltip": "Creates a Tile Rectangle Hash",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_new_line",
+  "message0": "Create Line %1 X1 %2 Y1 %3 X2 %4 Y2 %5",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "x2",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y2",
+      "check": "Number",
+      "align": "RIGHT"
+    }
+  ],
+  "output": null,
+  "colour": 0,
+  "tooltip": "Creates a Line Hash",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_new_point",
+  "message0": "Create Point %1 X %2 Y %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number",
+      "align": "RIGHT"
+    },
+  ],
+  "output": null,
+  "colour": 0,
+  "tooltip": "Creates a Point Hash",
+  "helpUrl": ""
+},
 {
   "type": "geometry_inside_rect",
   "message0": "Rectangle inside Rectangle? %1 First Rectangle %2 Second Rectangle %3",

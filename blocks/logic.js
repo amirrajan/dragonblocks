@@ -15,16 +15,6 @@
  */
 'use strict';
 
-goog.provide('Blockly.Blocks.logic');  // Deprecated
-goog.provide('Blockly.Constants.Logic');
-
-goog.require('Blockly');
-goog.require('Blockly.Blocks');
-goog.require('Blockly.FieldDropdown');
-goog.require('Blockly.FieldLabel');
-goog.require('Blockly.Mutator');
-
-
 /**
  * Unused constant for the common HSV hue for all blocks in this category.
  * @deprecated Use Blockly.Msg['LOGIC_HUE']. (2018 April 5)
