@@ -3313,7 +3313,7 @@ Blockly.defineBlocksWithJsonArray([
     {
       "type": "input_value",
       "name": "hex",
-      "check": "String"
+      "check": [ "String", "Colour" ]
     }
   ],
   "output": null,
@@ -3330,7 +3330,7 @@ Blockly.defineBlocksWithJsonArray([
       "name": "hash",
     }
   ],
-  "output": null,
+  "output": [ "String", "Colour" ],
   "colour": 0,
   "tooltip": "Converts Hash (DragonRuby Color) to Color Hex String (Blockly Color)",
   "helpUrl": ""
