@@ -66,7 +66,7 @@ Blockly.Ruby['lists_getIndex'] = function(block) {
   var mode = block.getFieldValue('MODE') || 'GET';
   var where = block.getFieldValue('WHERE') || 'FROM_START';
   var list = Blockly.Ruby.valueToCode(block, 'VALUE', Blockly.Ruby.ORDER_HIGH) ||
-      '([])';
+      '[]';
   var getIndex_ = Blockly.Ruby.lists.getIndex_;
 
   if ((where == 'LAST' || where == 'FROM_END' || where == 'RANDOM') &&

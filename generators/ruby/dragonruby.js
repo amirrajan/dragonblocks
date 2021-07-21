@@ -839,9 +839,48 @@ Blockly.Ruby.require = function(block) {
   return "require(" + path + ")\n";
 };
 
-Blockly.Ruby.eval = function(block) {
+Blockly.Ruby.eval_noreturn = function(block) {
   var code = Blockly.Ruby.valueToCode(block, 'code', Blockly.Ruby.ORDER_ATOMIC);
   return "eval(" + code + ")\n";
+};
+
+Blockly.Ruby.eval = function(block) {
+  var code = Blockly.Ruby.valueToCode(block, 'code', Blockly.Ruby.ORDER_ATOMIC);
+  return ["eval(" + code + ")", Blockly.Ruby.ORDER_ATOMIC];
+};
+
+Blockly.Ruby.join = function(block) {
+  var args = Blockly.Ruby.valueToCode(block, 'args', Blockly.Ruby.ORDER_ATOMIC);
+  return [args + ".join", Blockly.Ruby.ORDER_ATOMIC];    
+};
+
+Blockly.Ruby.color_hex_to_color_hash = function(block) {
+  var hex = Blockly.Ruby.valueToCode(block, 'hex', Blockly.Ruby.ORDER_ATOMIC);
+  var functionName = Blockly.Ruby.provideFunction_(
+      'dragonruby_hex2color',
+      ['def ' + Blockly.Ruby.FUNCTION_NAME_PLACEHOLDER_ +
+           '(h)',
+       '  color_r = h[1 .. 2].to_i(16)',
+       '  color_g = h[3 .. 4].to_i(16)',
+       '  color_b = h[5 .. 6].to_i(16)',
+       '  return { r: color_r, g: color_g, b: color_b, a: 255 }',
+       'end']);
+       
+  return ["dragonruby_hex2color(" + hex + ")", Blockly.Ruby.ORDER_ATOMIC];
+};
+
+Blockly.Ruby.color_hash_to_color_hex = function(block) {
+  var h = Blockly.Ruby.valueToCode(block, 'hash', Blockly.Ruby.ORDER_ATOMIC);
+  var functionName = Blockly.Ruby.provideFunction_(
+      'dragonruby_color2hex',
+      ['def ' + Blockly.Ruby.FUNCTION_NAME_PLACEHOLDER_ + '(h)',
+       '  color_r = ([100, [0, h.r].max].min * 2.55 + 0.5).floor',
+       '  color_g = ([100, [0, h.g].max].min * 2.55 + 0.5).floor',
+       '  color_b = ([100, [0, h.b].max].min * 2.55 + 0.5).floor',
+       '  return format("#%02x%02x%02x", color_r, color_g, color_b)',
+       'end']);
+       
+  return ["dragonruby_color2hex(" + h + ")", Blockly.Ruby.ORDER_ATOMIC];
 };
 
 Blockly.Ruby.to_a = function(block) {

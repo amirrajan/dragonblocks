@@ -3261,6 +3261,22 @@ Blockly.defineBlocksWithJsonArray([
   "helpUrl": ""
 },
 {
+  "type": "eval_noreturn",
+  "message0": "Eval Ruby Code %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "code",
+      "check": "String"
+    }
+  ],
+  "nextStatement": null,
+  "previousStatement": null,
+  "colour": 0,
+  "tooltip": "Evals Ruby Code, With no return result.",
+  "helpUrl": ""
+},
+{
   "type": "eval",
   "message0": "Eval Ruby Code %1",
   "args0": [
@@ -3272,7 +3288,51 @@ Blockly.defineBlocksWithJsonArray([
   ],
   "output": null,
   "colour": 0,
-  "tooltip": "Evals Ruby Code.",
+  "tooltip": "Evals Ruby Code, With return result.",
+  "helpUrl": ""
+},
+{
+  "type": "join",
+  "message0": "Join %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "args",
+      "check": "Array"
+    }
+  ],
+  "output": "String",
+  "colour": 0,
+  "tooltip": "Joins arguments which is array via .join and returns a String, Can be useful for concation.",
+  "helpUrl": ""
+},
+{
+  "type": "color_hex_to_color_hash",
+  "message0": "Convert Hex String Color %1 to Color Hash",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "hex",
+      "check": "String"
+    }
+  ],
+  "output": null,
+  "colour": 0,
+  "tooltip": "Converts Color Hex String (Blockly Color) to Hash (DragonRuby Color)",
+  "helpUrl": ""
+},
+{
+  "type": "color_hash_to_color_hex",
+  "message0": "Convert Color Hash %1 to Color Hex String",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "hash",
+    }
+  ],
+  "output": null,
+  "colour": 0,
+  "tooltip": "Converts Hash (DragonRuby Color) to Color Hex String (Blockly Color)",
   "helpUrl": ""
 },
 {

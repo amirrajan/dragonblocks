@@ -13,7 +13,7 @@ Blockly.Ruby['math_arithmetic'] = function(block) {
     MINUS: [' - ', Blockly.Ruby.ORDER_ADDITIVE],
     MULTIPLY: [' * ', Blockly.Ruby.ORDER_MULTIPLICATIVE],
     DIVIDE: [' / ', Blockly.Ruby.ORDER_MULTIPLICATIVE],
-    POWER: [' ^ ', Blockly.Ruby.ORDER_EXPONENTIATION]
+    POWER: [' ** ', Blockly.Ruby.ORDER_EXPONENTIATION]
   };
   var tuple = OPERATORS[block.getFieldValue('OP')];
   var operator = tuple[0];
@@ -36,7 +36,7 @@ Blockly.Ruby['math_single'] = function(block) {
   if (operator == 'POW10') {
     arg = Blockly.Ruby.valueToCode(block, 'NUM',
         Blockly.Ruby.ORDER_EXPONENTIATION) || '0';
-    return ['10 ^ ' + arg, Blockly.Ruby.ORDER_EXPONENTIATION];
+    return ['10 ** ' + arg, Blockly.Ruby.ORDER_EXPONENTIATION];
   }
   if (operator == 'ROUND') {
     arg = Blockly.Ruby.valueToCode(block, 'NUM',

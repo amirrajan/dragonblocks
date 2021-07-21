@@ -33,7 +33,7 @@ Blockly.Ruby['text_join'] = function(block) {
       elements[i] = Blockly.Ruby.valueToCode(block, 'ADD' + i,
           Blockly.Ruby.ORDER_NONE) || '\'\'';
     }
-    var code = '([' + elements.join(', ') + ']).join(\", \")';
+    var code = '[' + elements.join(', ') + '].join(\", \")';
     return [code, Blockly.Ruby.ORDER_HIGH];
   }
 };

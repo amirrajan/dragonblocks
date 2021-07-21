@@ -6,7 +6,7 @@ Blockly.Ruby['colour_picker'] = function(block) {
 };
 
 Blockly.Ruby['colour_random'] = function(block) {
-  var code = '"#%06x" % [rand(0, 2^24 - 1)]';
+  var code = 'format("#%06x", rand(0, 2 ** 24 - 1))';
   return [code, Blockly.Ruby.ORDER_HIGH];
 };
 
@@ -17,7 +17,7 @@ Blockly.Ruby['colour_rgb'] = function(block) {
        '  r = ([100, [0, r].max].min * 2.55 + 0.5).floor',
        '  g = ([100, [0, g].max].min * 2.55 + 0.5).floor',
        '  b = ([100, [0, b].max].min * 2.55 + 0.5).floor',
-       '  return "#%02x%02x%02x" % [r, g, b]',
+       '  return format("#%02x%02x%02x", r, g, b)',
        'end']);
   var r = Blockly.Ruby.valueToCode(block, 'RED',
       Blockly.Ruby.ORDER_NONE) || 0;
@@ -41,10 +41,10 @@ Blockly.Ruby['colour_blend'] = function(block) {
        '  b1 = colour1[5 .. 6].to_i(16)',
        '  b2 = colour2[5 .. 6].to_i(16)',
        '  ratio = [1, [0, ratio].max].min',
-       '  r = (r1 * (1 - ratio) + r2 * ratio + .5).floor',
-       '  g = (g1 * (1 - ratio) + g2 * ratio + .5).floor',
-       '  b = (b1 * (1 - ratio) + b2 * ratio + .5).floor',
-       '  return "#%02x%02x%02x" % [r, g, b]',
+       '  r = (r1 * (1 - ratio) + r2 * ratio + 0.5).floor',
+       '  g = (g1 * (1 - ratio) + g2 * ratio + 0.5).floor',
+       '  b = (b1 * (1 - ratio) + b2 * ratio + 0.5).floor',
+       '  return format("#%02x%02x%02x", r, g, b)',
        'end']);
   var colour1 = Blockly.Ruby.valueToCode(block, 'COLOUR1',
       Blockly.Ruby.ORDER_NONE) || '\'#000000\'';
