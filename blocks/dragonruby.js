@@ -1325,7 +1325,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "outputs_background_color",
-  "message0": "Set background color %1 Red %2 Green %3 Blue %4 Alpha %5",
+  "message0": "Set Background Color %1 Red %2 Green %3 Blue %4 Alpha %5",
   "args0": [
     {
       "type": "input_dummy"
