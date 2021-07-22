@@ -15,8 +15,7 @@ Blockly.Ruby['controls_if'] = function(block) {
           Blockly.Ruby.injectId(Blockly.Ruby.STATEMENT_SUFFIX, block),
           Blockly.Ruby.INDENT) + branchCode;
     }
-    code += (n > 0 ? 'else' : '') +
-        'if ' + conditionCode + ' \n' + branchCode;
+    code += (n > 0 ? 'elsif' : 'if') + ' ' + conditionCode + ' \n' + branchCode;
     ++n;
   } while (block.getInput('IF' + n));
 
