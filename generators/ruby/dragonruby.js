@@ -313,7 +313,7 @@ Blockly.Ruby.layout_rect = function(block) {
 
 // State
 Blockly.Ruby.state_created_at_elapsed = function(block) {
-  return ["$gtk.args.state.created_at_elapsed", Blockly.Ruby.ORDER_ATOMIC];
+  return ["$state.created_at_elapsed", Blockly.Ruby.ORDER_ATOMIC];
 };
 
 Blockly.Ruby.state_init_variable = function(block) {
