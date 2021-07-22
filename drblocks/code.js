@@ -333,7 +333,10 @@ Code.checkAllGeneratorFunctionsDefined = function(generator) {
  * Initialize Blockly.  Called on page load.
  */
 Code.init = function() {
-  Code.initLanguage();
+  //Code.initLanguage();
+  document.title += ' ' + MSG['title'];
+  document.getElementById('title').textContent = MSG['title'];
+  document.getElementById('tab_blocks').textContent = MSG['blocks'];
 
   var rtl = Code.isRtl();
   var container = document.getElementById('content_area');
